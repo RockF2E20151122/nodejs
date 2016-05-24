@@ -1,0 +1,1 @@
+@node "F:\workspace-ggts-3.6.4.RELEASE\nodejs\sevenDays\node-echo.js" %*
