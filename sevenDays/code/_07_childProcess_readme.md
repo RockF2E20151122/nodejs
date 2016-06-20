@@ -9,7 +9,7 @@ Node.js的child_process模块中有两个方法spawn和exec，这两个方法都
 一些Node.js的新手常常对这个两个方法感到很困惑：既然两个方法的功能一样，那么究竟应该选择哪个方法。
 在本文中，我们将一起来探索spawn和我exec方法的不同之处，以便你在将来能够选择正确的方法。
 
-child_process.spaen会返回一个带有stdout和stderr流的对象。你可以通过stdout流来读取子进程返回给Node.js的数据。
+child_process.spawn会返回一个带有stdout和stderr流的对象。你可以通过stdout流来读取子进程返回给Node.js的数据。
 stdout拥有’data’,’end’以及一般流所具有的事件。当你想要子进程返回大量数据给Node时，比如说图像处理，读取二进制数据等等，你最好使用spawn方法。
 
 child_process.spawn方法是“异步中的异步”，意思是在子进程开始执行时，它就开始从一个流总将数据从子进程返回给Node。
