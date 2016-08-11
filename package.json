@@ -1,5 +1,7 @@
-
 {
-    "name": "jsonConfig",
-    "main": "./sevenDays/packageTest/index"
+  "name": "jsonConfig",
+  "main": "./sevenDays/packageTest/index",
+  "dependencies": {
+    "dustjs-helpers": "^1.7.3"
+  }
 }

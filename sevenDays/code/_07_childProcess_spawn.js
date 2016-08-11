@@ -30,7 +30,7 @@ var download_file_curl = function(file_url) {
 	// 当子进程退出时，检查是否有错误，同时关闭文件流
 	curl.on('exit', function(code) {
 		if (code != 0) {
-			console.log('Failed: ' + code);
+			console.log('Failed: ' + code);//here are some error: if code is not 0. but not an error
 		}
 	});
 };
