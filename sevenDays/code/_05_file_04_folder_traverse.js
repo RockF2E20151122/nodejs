@@ -11,8 +11,8 @@ var path = require('path');
 function travel(dir, callback) {
 	fs.readdirSync(dir).forEach(function(file) {
 		var pathname = path.join(dir, file);
-
 		if (fs.statSync(pathname).isDirectory()) {
+            // console.log( 'travel pathname:', pathname );
 			travel(pathname, callback);
 		} else {
 			callback(pathname);
@@ -21,22 +21,23 @@ function travel(dir, callback) {
 };
 //可以看到，该函数以某个目录作为遍历的起点。
 //遇到一个子目录时，就先接着遍历子目录。遇到一个文件时，就把文件的绝对路径传给回调函数。回调函数拿到文件路径后，就可以做各种判断和处理。因此假设有以下目录：
-
-travel('./sevenDays/node-echo', function (pathname) {
-    console.log(pathname);
-});
+// travel('./../code/node-echo', function (pathname) {
+    // console.log(pathname);
+// });
 
 travel('/Users/dihwang/workspace-sts-3.7.2.RELEASE/nodejs/sevenDays/node-echo', function (pathname) {
-    console.log(pathname);
+    console.log('pathname', pathname );
 });
-
+console.log('----------------------------------------------------');
 //异步遍历
 function aTravel(dir, callback, finish) {
     fs.readdir(dir, function (err, files) {
+        // console.log( 'files:', files );
         (function next(i) {
+            console.log('files:', files);
             if (i < files.length) {
                 var pathname = path.join(dir, files[i]);
-
+                console.log( 'aTravel pathname:', pathname );
                 fs.stat(pathname, function (err, stats) {
                     if (stats.isDirectory()) {
                         travel(pathname, callback, function () {

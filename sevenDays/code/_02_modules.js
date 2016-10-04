@@ -1,5 +1,5 @@
 
-var modu = require('./sevenDays/testModule.js');
+var modu = require('./../testModule.js');
 
 //modu.hello();
 modu();

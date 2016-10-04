@@ -1,5 +1,4 @@
 //http://nodejs.org/api/fs.html
-
 /**
  * fs内置模块提供对文件的操作。fs模块提供的API基本上可以分为以下三类：
  * 
@@ -15,7 +14,6 @@
  * 
  * 其中常用的有fs.open、fs.read、fs.write、fs.close等等。
  */
-
 fs.readFile(pathname, function(err, data) {
 	//所有fs模块API的回调参数都有两个。第一个参数在有错误发生时等于异常对象，第二个参数始终用于返回API方法执行结果。
 	if (err) {
@@ -33,4 +31,3 @@ try {
 } catch (err) {
     // Deal with error.
 }
-

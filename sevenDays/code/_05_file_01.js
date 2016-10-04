@@ -9,6 +9,9 @@ function main(argv) {
 	copy(argv[0], argv[1]);
 }
 
+console.log('paths0:',process.argv[0],'paths1:', process.argv[1]);
+//paths0: /usr/local/bin/node paths1: /Users/dihwang/workspace-sts-3.7.2.RELEASE/nodejs/sevenDays/code/_05_file_01.js
+
 main(process.argv.slice(2));		//[1,2,3,4].slice(2)	return 	[3, 4]
 
 // process是一个全局变量，可通过process.argv获得命令行参数。
@@ -17,6 +20,6 @@ main(process.argv.slice(2));		//[1,2,3,4].slice(2)	return 	[3, 4]
 
 //test:
 //LM-SHC-16501205:npmOnly dihwang$ 
-//node /Users/dihwang/workspace-sts-3.7.2.RELEASE/nodejs/_05_file_01.js /Users/dihwang/workspace-sts-3.7.2.RELEASE/nodejs/sevenDays/node-echo/README.md /Users/dihwang/workspace-sts-3.7.2.RELEASE/nodejs/sevenDays/npmOnly/README.md
+//node /Users/dihwang/workspace-sts-3.7.2.RELEASE/nodejs/sevenDays/code/_05_file_01.js /Users/dihwang/workspace-sts-3.7.2.RELEASE/nodejs/sevenDays/node-echo/README.md /Users/dihwang/workspace-sts-3.7.2.RELEASE/nodejs/sevenDays/npmOnly/README.md
 //
 //the result is npmOnly folder has a new file
