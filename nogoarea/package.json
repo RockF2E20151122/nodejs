@@ -1,0 +1,14 @@
+{
+  "name": "nogoArea",
+  "version": "0.0.1",
+  "description": "npm ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test command"
+  },
+  "author": "Rock Wang",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.0.5"
+  }
+}

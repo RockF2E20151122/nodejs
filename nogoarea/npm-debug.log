@@ -1,0 +1,59 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   'nogoArea' ]
+2 info using npm@3.3.12
+3 info using node@v5.2.0
+4 verbose publish [ 'nogoArea' ]
+5 silly cache add args [ 'nogoArea', null ]
+6 verbose cache add spec nogoArea
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: 'nogoArea',
+7 silly cache add   scope: null,
+7 silly cache add   name: 'nogoArea',
+7 silly cache add   rawSpec: '',
+7 silly cache add   spec: '*',
+7 silly cache add   type: 'range' }
+8 silly addNamed nogoArea@*
+9 verbose addNamed "*" is a valid semver range for nogoArea
+10 silly addNameRange { name: 'nogoArea', range: '*', hasData: false }
+11 silly mapToRegistry name nogoArea
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry http://registry.npmjs.org/
+14 silly mapToRegistry uri http://registry.npmjs.org/nogoArea
+15 verbose addNameRange registry:http://registry.npmjs.org/nogoArea not in flight; fetching
+16 verbose request uri http://registry.npmjs.org/nogoArea
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 6:39:06 PM
+19 verbose request using bearer token for auth
+20 verbose request id 46c93da179a65662
+21 http request GET http://registry.npmjs.org/nogoArea
+22 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 10.64.251.189:80
+23 info attempt registry request try #2 at 6:40:31 PM
+24 verbose request using bearer token for auth
+25 http request GET http://registry.npmjs.org/nogoArea
+26 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 10.64.251.189:80
+27 info attempt registry request try #3 at 6:42:46 PM
+28 verbose request using bearer token for auth
+29 http request GET http://registry.npmjs.org/nogoArea
+30 verbose stack Error: connect ETIMEDOUT 10.64.251.189:80
+30 verbose stack     at Object.exports._errnoException (util.js:856:11)
+30 verbose stack     at exports._exceptionWithHostPort (util.js:879:20)
+30 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1064:14)
+31 verbose cwd /Users/dihwang/workspace/forks_fe/common/nogoarea
+32 error Darwin 16.0.0
+33 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "nogoArea"
+34 error node v5.2.0
+35 error npm  v3.3.12
+36 error code ETIMEDOUT
+37 error errno ETIMEDOUT
+38 error syscall connect
+39 error network connect ETIMEDOUT 10.64.251.189:80
+39 error network This is most likely not a problem with npm itself
+39 error network and is related to network connectivity.
+39 error network In most cases you are behind a proxy or have bad network settings.
+39 error network
+39 error network If you are behind a proxy, please make sure that the
+39 error network 'proxy' config is set properly.  See: 'npm help config'
+40 verbose exit [ 1, true ]

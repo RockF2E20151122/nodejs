@@ -1,0 +1,7 @@
+{
+  "name": "node_debug",
+  "main": "./index",
+  "dependencies": {
+    "dustjs-helpers": "^1.7.3"
+  }
+}
